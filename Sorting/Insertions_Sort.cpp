@@ -1,6 +1,6 @@
 #include<iostream>
 #include <vector>
-#include "random_int_array_generator.h"
+#include "../random_int_array_generator.h"
 #include <ctime>
 using namespace std;
 
@@ -25,13 +25,13 @@ template<typename Func>
 void functionToTime(Func func, vector<int> arr, int length) {
 
     clock_t start = clock();
-    // Program code here  
     
     func(arr,length);
 
 
     clock_t end = clock();
     double elapsed = double(end - start) / CLOCKS_PER_SEC;
+    cout << endl;
     std::cout << "Elapsed time: " << elapsed << " seconds." << std::endl;
 }
 
@@ -47,31 +47,31 @@ int main(){
 
     functionToTime(insertion_sort,arr1,arr1.size());
 
-    cout << "for arr1 :" << endl;
+    cout << "for Array 1 :" << endl;
     for(int i:arr1) cout << i << " ";
         cout << endl;
 
     functionToTime(insertion_sort, arr2, arr2.size());
 
-    cout << "for arr2 :" << endl;
+    cout << "for Array 2 :" << endl;
     for(int i:arr2) cout << i << " ";
         cout << endl;
     
     functionToTime(insertion_sort, arr3, arr3.size());
 
-    cout << "for arr3 :" << endl;
+    cout << "for Array 3:" << endl;
     for(int i:arr3) cout << i << " ";
         cout << endl;
     
     functionToTime(insertion_sort, arr4, arr4.size());
 
-    cout << "for arr4 :" << endl;
+    cout << "for Array 4:" << endl;
     for(int i:arr4) cout << i << " ";
         cout << endl;
 
     functionToTime(insertion_sort, arr5, arr5.size());
 
-    cout << "for arr5 :" << endl;
+    cout << "for Array 5 :" << endl;
     for(int i:arr5) cout << i << " ";
         cout << endl;
 
